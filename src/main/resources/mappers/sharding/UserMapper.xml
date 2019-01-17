@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lst.sharding.dao.sharding.UserMapper">
+  <insert id="insert">
+    INSERT INTO
+    user
+    ( name,
+    type,
+    age)
+    VALUES (
+    #{name},
+    #{type},
+    #{age}
+    )
+  </insert>
+
+  <select id="getById" resultType="com.lst.sharding.entity.User">
+    SELECT *
+    FROM user
+    WHERE
+    id = #{id}
+  </select>
+
+  <select id="getUserList" resultType="com.lst.sharding.entity.User">
+
+
+  </select>
+
+</mapper>

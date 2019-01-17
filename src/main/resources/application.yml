@@ -1,0 +1,17 @@
+spring:
+    datasource:
+      url: jdbc:mysql://127.0.0.1:3306/demo?useSSL=false
+      sharding:
+          db0:
+            url: 127.0.0.1:3306/sharding_0
+          db1:
+            url: 127.0.0.1:3306/sharding_1
+          username: root
+          password: Zeng1993.--
+          driver-class-name: com.mysql.jdbc.Driver
+          min-idle: 1
+          max-active: 2
+          initial-size: 1
+
+sharding:
+  showsql: true
